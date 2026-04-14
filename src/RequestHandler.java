@@ -1,4 +1,3 @@
-
 import java.net.*;
 import java.io.*;
 
@@ -14,7 +13,10 @@ public class RequestHandler {
 
             boolean isAdmin = clientIP.getHostAddress().equals(ADMIN_IP);
 
-        
+            switch (command) {
+                case "READ":
+                    return readFile(parts[1]);
+            }
         }
     }
 }
