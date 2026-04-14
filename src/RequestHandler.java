@@ -24,6 +24,10 @@ public class RequestHandler {
                 case "EXECUTE":
                     if (!isAdmin) return "ACCESS DENIED";
                     return "EXECUTED: " + parts[1];
+
+                default:
+                    return "COMMAND NOT FOUND";
+
             }
         }
     }
