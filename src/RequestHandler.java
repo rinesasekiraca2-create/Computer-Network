@@ -16,6 +16,10 @@ public class RequestHandler {
             switch (command) {
                 case "READ":
                     return readFile(parts[1]);
+
+                case "WRITE":
+                    if (!isAdmin) return "ACCESS DENIED";
+                    return writeFile(parts[1], parts[2]);
             }
         }
     }
