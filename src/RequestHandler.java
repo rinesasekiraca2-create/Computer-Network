@@ -20,6 +20,10 @@ public class RequestHandler {
                 case "WRITE":
                     if (!isAdmin) return "ACCESS DENIED";
                     return writeFile(parts[1], parts[2]);
+
+                case "EXECUTE":
+                    if (!isAdmin) return "ACCESS DENIED";
+                    return "EXECUTED: " + parts[1];
             }
         }
     }
