@@ -27,8 +27,16 @@ public class RequestHandler {
 
                 default:
                     return "COMMAND NOT FOUND";
-
             }
         }
+        catch (Exception e) {
+            return "ERROR: " + e.getMessage();
+        }
+    }
+    private static String readFile(String fileName) throws IOException {
+        File file = new File(SERVER_FOLDER + "/" + fileName);
+        if (!file.exists()) return "FILE NOT FOUND";
+
+
     }
 }
