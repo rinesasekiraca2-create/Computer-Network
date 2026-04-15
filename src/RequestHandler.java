@@ -38,5 +38,17 @@ public class RequestHandler {
         if (!file.exists()) return "FILE NOT FOUND";
 
 
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        StringBuilder content = new StringBuilder();
+        String line;
+
+        while ((line = br.readLine()) != null) {
+            content.append(line).append("\n");
+        }
+        br.close();
+
+        return content.toString();
+    
+
     }
 }
