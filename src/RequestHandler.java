@@ -48,7 +48,15 @@ public class RequestHandler {
         br.close();
 
         return content.toString();
-    
+
 
     }
+    private static String writeFile(String fileName, String content) throws IOException {
+        FileWriter fw = new FileWriter(SERVER_FOLDER + "/" + fileName);
+        fw.write(content);
+        fw.close();
+
+        return "FILE WRITTEN SUCCESSFULLY";
+    }
+
 }
