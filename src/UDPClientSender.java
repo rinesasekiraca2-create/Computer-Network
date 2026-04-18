@@ -6,7 +6,7 @@ public class UDPClientSender {
 
     public static final String SERVER_IP = "192.168.1.105";
 
-    public static final int SERVER_PORT = 9876;
+    public static final int SERVER_PORT = 4444;
 
     public static void main(String[] args) throws Exception {
 
