@@ -1,8 +1,8 @@
 import java.net.*;
 import java.io.*;
 
-
 public class RequestHandler {
+
     private static final String SERVER_FOLDER = "server_files";
     private static final String ADMIN_IP = "192.168.1.105";
 
@@ -28,15 +28,14 @@ public class RequestHandler {
                 default:
                     return "COMMAND NOT FOUND";
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             return "ERROR: " + e.getMessage();
         }
     }
+
     private static String readFile(String fileName) throws IOException {
         File file = new File(SERVER_FOLDER + "/" + fileName);
         if (!file.exists()) return "FILE NOT FOUND";
-
 
         BufferedReader br = new BufferedReader(new FileReader(file));
         StringBuilder content = new StringBuilder();
@@ -48,9 +47,8 @@ public class RequestHandler {
         br.close();
 
         return content.toString();
-
-
     }
+
     private static String writeFile(String fileName, String content) throws IOException {
         FileWriter fw = new FileWriter(SERVER_FOLDER + "/" + fileName);
         fw.write(content);
@@ -58,5 +56,4 @@ public class RequestHandler {
 
         return "FILE WRITTEN SUCCESSFULLY";
     }
-
 }
