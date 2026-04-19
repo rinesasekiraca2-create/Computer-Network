@@ -29,17 +29,17 @@ Access control is based on the client’s IP address, where one designated IP ac
 
 
 ### Server Side
-Listens on UDP port 4444
-Accepts requests from multiple clients
-Processes commands using RequestHandler
-Performs file operations inside server_files folder
-Controls access based on client IP
+- Listens on UDP port 4444
+- Accepts requests from multiple clients
+- Processes commands using RequestHandler
+- Performs file operations inside server_files folder
+- Controls access based on client IP
 
 ### Client Side
-Connects to server using IP and port
-Sends commands as text messages
-Receives responses from server
-Supports continuous interaction loop
+- Connects to server using IP and port
+- Sends commands as text messages
+- Receives responses from server
+- Supports continuous interaction loop
 
 
 
@@ -54,10 +54,10 @@ Supports continuous interaction loop
 - Restricted from modifying or executing commands
 
 ### Contributors
-Afron → UDPServer implementation & server logic
-Rinesa → Request handling & command processing logic
-Abdurrahman → Client receiver implementation
-Adna → Client sender implementation
+- Afron → UDPServer implementation & server logic
+- Rinesa → Request handling & command processing logic
+- Abdurrahman → Client receiver implementation
+- Adna → Client sender implementation
 
 
 ## Conclusion
