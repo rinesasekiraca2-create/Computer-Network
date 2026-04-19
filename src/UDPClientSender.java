@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UDPClientSender {
 
-    public static final String SERVER_IP = "192.168.1.105";
+    public static final String SERVER_IP = "172.16.109.190";
 
     public static final int SERVER_PORT = 4444;
 
@@ -16,6 +16,8 @@ public class UDPClientSender {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Shkruaj emrin e klientit: ");
+        String clientName = scanner.nextLine();
         System.out.println("Klienti (Sender) i lidhur me serverin");
 
         while (true) {
@@ -24,7 +26,9 @@ public class UDPClientSender {
 
             String command = scanner.nextLine();
 
-            byte[] sendData = command.getBytes();
+            String fullMessage = clientName + " " + command;
+
+            byte[] sendData = fullMessage.getBytes();
 
             DatagramPacket sendPacket =
 
