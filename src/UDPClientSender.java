@@ -22,8 +22,8 @@ public class UDPClientSender {
 
         while (true) {
 
-            System.out.print("Shkruaj komandë: ");
-
+            System.out.println("\nShkruaj njërën nga komandat: READ / WRITE / EXECUTE");
+            System.out.print("Shkruaj komandën: ");
             String command = scanner.nextLine();
 
             String fullMessage = clientName + " " + command;
